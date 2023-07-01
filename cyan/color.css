@@ -1,0 +1,658 @@
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 15px;
+    background-color: #ced4e2;
+    transition: background-color .3s;
+}
+body[light-mode=dark] {
+    background-color: #141516;
+    color: whitesmoke;
+}
+
+body[light-mode="dark"] .light-mode-button span:nth-child(1){
+    background-color: #ced4e2;
+    color: #141516;
+}
+
+body[light-mode=dark] .light-mode-button span:nth-child(2) {
+    left: 19.5px;
+    background-color: #000;
+}
+.contrainer{
+    float: right;
+    padding-right: 16px;
+}
+header{
+    border-radius: 5px;
+    text-decoration-style: solid;
+    -webkit-text-decoration-style: solid;
+    -moz-text-decoration-style: solid;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    padding: 25px 25px 12.5px 25px;
+}
+.light-mode-button {
+    background:0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 14px;
+    width: 28px;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0);
+}
+
+.light-mode-button:focus {
+    outline:none; /* Not ideal for accessibility */
+}
+
+.light-mode-button span:nth-child(1) {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 35px;
+    height: 19px;
+    border-radius: 20px;
+    background-color: #d6d7db;
+    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+    transition: .3s;
+}
+.light-mode-button span:nth-child(2) {
+    position: absolute;
+    top: 3px;
+    left:2px;
+    width: 13px;
+    height: 13px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+    transition: .3s;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #0000;
+    position: fixed; 
+    top: 0; 
+    right: 15px;
+    width: 100%;
+}
+.navbar a {
+    float: right;
+    display: block;
+    color: #414141;
+    font-size: 14px;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background: #E5E4E2;
+    color: black;
+}
+/*.header{
+    padding-top: 8.5px;
+    font: status-bar;
+    filter: saturate(100%);
+    color: transparent;
+    cursor: pointer;
+    width: fit-content;
+    transform: translate(-0%, -0%);
+    background: linear-gradient(45deg, #007FF0, #000000, #0000FF, #964B00, #00FFFF, #00FF00, #808080, #FF00FF, #FF8000, #FFC0CB, #800080, #EE82EE, #FF0000, #FFFFFF, #FFFF00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: ease;
+    font-size: 16px;
+}
+.header h1{
+    color: transparent;
+    animation: effect 30s infinite alternate-reverse;
+}
+@keyframes effect{
+    0%{
+        background: #007FF0;
+        -webkit-background-clip: text;
+    }
+    5%{
+        background: black;
+        -webkit-background-clip: text;
+    }
+    10%{
+        background: #0000FF;
+        -webkit-background-clip: text;
+    }
+    15%{
+        background: #964B00;
+        -webkit-background-clip: text;
+    }
+    20%{
+        background: #00FFFF;
+        -webkit-background-clip: text;
+    }
+    25%{
+        background: #00FF00;
+        -webkit-background-clip: text;
+    }
+    30%{
+        background: #808080;
+        -webkit-background-clip: text;
+    }
+    35%{
+        background: #FF00FF;
+        -webkit-background-clip: text;
+    }
+    40%{
+        background: #FF8000;
+        -webkit-background-clip: text;
+    }
+    45%{
+        background: #FFC0CB;
+        -webkit-background-clip: text;
+    }
+    50%{
+        background: #800080;
+        -webkit-background-clip: text;
+    }
+    55%{
+        background: #EE82EE;
+        -webkit-background-clip: text;
+    }
+    60%{
+        background: #FF0000;
+        -webkit-background-clip: text;
+    }
+    65%{
+        background: #FF0080;
+        -webkit-background-clip: text;
+    }
+    70%{
+        background: #0000FF;
+        -webkit-background-clip: text;
+    }
+    75%{
+        background: #FFFF00;
+        -webkit-background-clip: text;
+    }
+    80%{
+        background: #007FF0;
+        -webkit-background-clip: text;
+    }
+    85%{
+        background: #000000;
+        -webkit-background-clip: text;
+    }
+    90%{
+        background: #0000FF;
+        -webkit-background-clip: text;
+    }
+    95%{
+        background: #964B00;
+        -webkit-background-clip: text;
+    }
+    100%{
+        background: #00FFFF;
+        -webkit-background-clip: text;
+    }
+}*/
+.wholesearch{
+    border: 1px solid gray;
+    padding: 8px;
+    border-radius: 20px;
+    padding-right: 15px;
+    float: left;
+}
+#sbar{
+    padding: 5px;
+    font: menu;
+    font-size: 12.5px;
+    outline: none;
+    border: none;
+}
+.wholesearch #sbutton{
+    background-color: #0000;
+    margin-right: 50px;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    float: right;
+}
+/*.supplink{
+    text-align: right;
+    font-size: .9em;
+}
+.feedback{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.feedbackli{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+.support{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.supplinks{
+    font: message-box;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+.orca{
+    padding-right: 4%;
+}*/
+.background{
+    width: 100px;
+    border-radius: 12px;
+    height: 100px;
+}
+.def{
+    padding: 5px;
+    padding-left: 10px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.a-link{
+    padding-left: 2.0%;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 1.9em;
+    text-align: center;
+    justify-content: center;
+}
+.a-text{
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.fa-info-circle{
+    cursor: pointer;
+    font-size: 1.43em;
+}
+#open{
+    margin: 5px;
+    border:none;
+    outline: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    border-color: #0000;
+    padding-left: 0;
+    border-radius:10px;
+    color: #000000;
+    background-color:#0000;
+}
+
+#open:hover{
+    color: #000000;
+
+}
+.navbar {
+    overflow: hidden;
+    background-color: #0000;
+    position: fixed; 
+    top: 0; 
+    right: 15px;
+    width: 100%;
+}
+.navbar a {
+    float: right;
+    display: block;
+    color: #808080;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background: #E5E4E2;
+    color: black;
+}
+  
+.dropdown {
+    float: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #808080;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0;
+  }
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #E5E4E2;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.pop{
+    position: relative;
+    margin: auto;
+    margin-left: auto;
+    padding-bottom: 5cm;
+    border:3px solid transparent ;
+    border-radius:10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 24px;
+    font-size: 0.9em;
+    color:black;
+    background-color:white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    width: 5cm;
+    height: 5.6cm;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    transition:all 0.5s;
+    transform:scale(0);
+}
+.pop u{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+#cross{
+    border:3px solid transparent ;
+    border-radius:3px;
+    padding-left: 85%;
+    margin-top: -20px;
+    margin-right: -10px;
+    outline: none;
+    color:red;
+    background-color:white;
+}
+.fa-times-circle{
+    font-size: 24px;
+}
+#cross:hover{
+    content: "Close";
+}
+.tabs{
+    border: 2px solid;
+    border-radius: 3px;
+}
+.tab{
+    margin: 15px;
+}
+.info{
+    color: #ED1B24;
+    padding: 9px 0 9px 3px;
+    font-size: 13.5px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.tap{
+    border: 2px groove;
+    border-radius: 5px;
+}
+.tapp{
+    margin: 10px;
+}
+.tabs .tab a{
+    font: message-box;
+    font-size: 1.2em;
+}
+.text{
+    font: menu;
+    font-size: 0.9em;
+}
+.under-txt{
+    font: message-box;
+}
+#myInput{
+    border-style: none;
+    border-spacing: 1px;
+    background-color: white;
+    color: #000000;
+    padding: 0%;
+    width: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:medium;
+}
+button{
+    background-color: #45B1E8;
+    border-radius: 100px;
+    padding-left: 12px;
+    padding-right: 10px;
+    cursor: pointer;
+    font: message-box;
+    font-size: small;
+}
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 140px;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000000 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+    opacity: 1;
+}
+.footer-social {
+    position: relative;
+    margin-top: 15px;
+}
+
+.footer-social a {
+    display: inline-block;
+}
+footer{
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    padding: 25px;
+    background: linear-gradient(135deg, #007FF0, #0000FF, #00FF00, #FF00FF, #FFC0CB, #EE82EE, #FF0000, #FFFF00);
+}
+.container-copyright{
+    color: #36454F;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container-copyright a{
+    text-decoration: none;
+    color: #36454F;
+}
+.line{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100px;
+    padding: 0 0;
+    border-bottom: 1px solid #ffffff;
+    color: white;
+}
+
+.footer-social a i {
+    margin-right: 15px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer-social a:hover i {
+    color: #414141;
+}
+.tap .tapp .wordlink{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.9em;
+    color: #000000;
+}
+@media (max-width: 800px){
+    #open{
+        padding-left: 0;
+    }
+    .orca{
+        padding-right: 7.6%;
+    }
+    .a-link{
+        font-size: 1.5em;
+        padding-left: 3%;
+    }
+    .a-text{
+        font-size: 20px;
+    }
+    
+}
+.sb-example-3 .search__title {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    color: #ff8b88;
+}
+
+.sb-example-3 .search__input, #sbuton {
+    padding-right: 25px;
+    padding: 10px;
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    font-size: 13px;
+    line-height: 18px;
+    color: #575756;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    float: left;
+    background-size: 18px 18px;
+    background-position: 95% center;
+    border-radius: 50px;
+    border: 1px solid #575756;
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+#sbuton{
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+.sb-example-3 .search__input::placeholder {
+        color: rgba(87, 87, 86, 0.8);
+        letter-spacing: 1.5px;
+    }
+
+.sb-example-3 .search__input:hover,
+    .search__input:focus {
+        padding: 12px 0;
+        outline: 0;
+        border: 1px solid transparent;
+        border-bottom: 1px solid #575756;
+        border-radius: 0;
+        background-position: 100% center;
+    }
+
+
+    
+    /* Main styles */
+     .ttext {
+         fill: none;
+         stroke-width: 3;
+         stroke-linejoin: round;
+         stroke-dasharray: 70 330;
+         stroke-dashoffset: 0;
+         -webkit-animation: stroke 6s infinite linear;
+         animation: stroke 6s infinite linear;
+    }
+     .ttext:nth-child(5n + 1) {
+         stroke: #f2385a;
+         -webkit-animation-delay: -1.2s;
+         animation-delay: -1.2s;
+    }
+     .ttext:nth-child(5n + 2) {
+         stroke: #f5a503;
+         -webkit-animation-delay: -2.4s;
+         animation-delay: -2.4s;
+    }
+     .ttext:nth-child(5n + 3) {
+         stroke: #e9f1df;
+         -webkit-animation-delay: -3.6s;
+         animation-delay: -3.6s;
+    }
+     .ttext:nth-child(5n + 4) {
+         stroke: #56d9cd;
+         -webkit-animation-delay: -4.8s;
+         animation-delay: -4.8s;
+    }
+     .ttext:nth-child(5n + 5) {
+         stroke: #3aa1bf;
+         -webkit-animation-delay: -6s;
+         animation-delay: -6s;
+    }
+     @-webkit-keyframes stroke {
+         100% {
+             stroke-dashoffset: -400;
+        }
+    }
+     @keyframes stroke {
+         100% {
+             stroke-dashoffset: -400;
+        }
+    }
+    /* Other styles */
+     svg {
+         position: relative;
+         width: 100%;
+         height: 100%;
+         margin: 0 0 -10% 0;
+    }
+     
+
+
+
+/*<a href="update.html">Updates</a>
+        <a href="about.html">About</a>
+         <a href="index.html">Home</a>
+linear-gradient(155deg, #FFFF00, #FFFFFF, #FF0000, #EE82EE, #800080, #FFC0CB, #FF8000, #FF00FF, #808080, #00FF00, #00FFFF, #964B00, #0000FF, #000000, #007FF0);
+'https://images.unsplash.com/photo-1441861187324-6970a2587e34?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80.jpg, https://images.unsplash.com/photo-1616831867660-0c396f48f36f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGF6dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1565948703999-fae561bdcbd0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGF6dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1489183988443-b37b7e119ba6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGJsdWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1486848538113-ce1a4923fbc5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJsdWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1562873658-15d15ab42c13?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fGJsdWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1504537103742-67c282f65f24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cmVkfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1498144846853-60ca2d43853b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHJlZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1517374096549-0b818e3de484?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fHJlZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1482872376051-5ce74ebf0908?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjN8fHJlZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8eWVsbG93fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1484689228555-fd6bc1b28b7e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHllbGxvd3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1496151428281-1d6de673b58e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHllbGxvd3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1481456384069-0effc539ab7e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHllbGxvd3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1464639351491-a172c2aa2911?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGJsYWNrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1435164205788-305635a36ec2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGJsYWNrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1584351583369-6baf055b51a7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fGJsYWNrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1533523705247-88786d3e9242?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bWFnZW50YXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1612228188363-817c02068b29?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fG1hZ2VudGF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1559614500-75b5f1ffab7c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fG1hZ2VudGF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1520052205864-92d242b3a76b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGlua3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1511400691561-b3a6cfd8de93?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fHBpbmt8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1518821703881-9da5a9f42038?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTl8fHBpbmt8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHVycGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHB1cnBsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1527067829737-402993088e6b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHB1cnBsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1622891597799-17ac7f9ab6fc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dmlvbGV0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1558481795-7f0a7c906f5e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHZpb2xldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1586830746542-19b25c53497f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHdoaXRlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1433574466251-fe1be0d9b3d2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHdoaXRlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1510674485131-dc88d96369b4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fHdoaXRlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1573952106639-694daec2b88a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGdyZWVufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1601370690183-1c7796ecec61?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTl8fGdyZWVufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODl8fGdyZWVufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1511974212900-b42a18e19eb8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG9yYW5nZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1444090542259-0af8fa96557e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG9yYW5nZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1477936821694-ec4233a9a1a0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fG9yYW5nZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHJvc2UlMjBjb2xvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJvc2UlMjBjb2xvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1508610048659-a06b669e3321?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHJvc2UlMjBjb2xvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1621619856624-42fd193a0661?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGdyYXl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1624594895779-14457ba78dcd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGdyYXl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1602236500744-955c6ffc275b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGN5YW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1527870428821-bb5d20b1345f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjF8fGN5YW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1542401886-65d6c61db217?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YnJvd258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60.jpg , https://images.unsplash.com/photo-1558470598-a5dda9640f68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFpbmJvd3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1463438690606-f6778b8c1d10?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29sb3JmdWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1535083252457-6080fe29be45?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fGNvbG9yZnVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1573164713988-8665fc963095?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg , https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHRlY2hub2xvZ3l8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpg'*/

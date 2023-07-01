@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href='https://fonts.googleapis.com/css?family=Aladin|Bungee Outline|Aguafina Script|Akronim|Aldrich|Alegreya|Alex Brush|Allerta Stencil|Allura|Almendra SC|Amethysta|Annie Use Your Telescope|Arbutus|Arizonia|Asset|Astloch|Bad Script|Barrio|Bellefair|Berkshire Swash|Bilbo|BioRhyme Expanded|Bonbon|Butcherman|Butterfly Kids|Caveat|Charmonman|Cinzel Decorative|Codystar|Crafty Girls|Caesar Dressing|Dawning of a New Day|Faster One|Frijole|Geostar|Give You Glory|Hi Melody|Italianno|Jacques Francois Shadow|KhandMajor Mono Display|Meddon|Miltonian|Monofett|Monoton|Mystery Quest|Nosifer|Orbitron|Petit Formal Script|Sacramento|Shadows Into Light Two|Snowburst One|Dancing Script|Vibur|Raleway'
+        rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="input.css">
+    <script src="color.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorpediar</title>
+</head>
+
+<body>
+    <!-- <div class="loader mx-auto my-[250px]">
+        <div class="cell d-0"></div>
+        <div class="cell d-1"></div>
+        <div class="cell d-2"></div>
+
+        <div class="cell d-1"></div>
+        <div class="cell d-2"></div>
+
+
+        <div class="cell d-2"></div>
+        <div class="cell d-3"></div>
+
+
+        <div class="cell d-3"></div>
+        <div class="cell d-4"></div>
+
+
+    </div> -->
+
+
+
+
+    <div class="">
+        <section class="gap-[20px] flex font-montserrat font-medium justify-center my-[60px]">
+            <a class="text-[#121212] hover:underline underline-offset-4" href="">Home</a>
+            <a class="text-[#121212] hover:underline underline-offset-4" href="">About</a>
+            <a class="text-[#121212] hover:underline underline-offset-4" href="">Donate</a>
+        </section>
+    </div>
+
+    <div class="header">
+        <svg viewBox="0 0 600 300">
+            <!-- Symbol-->
+            <symbol id="s-text"><text text-anchor="middle" x="50%" y="50%" dy=".35em"
+                    style="letter-spacing: 4px; font-size:2em;">Colorpediar</text></symbol><!-- Duplicate symbols-->
+            <use class="ttext" xlink:href="#s-text"></use>
+            <use class="ttext" xlink:href="#s-text"></use>
+            <use class="ttext" xlink:href="#s-text"></use>
+            <use class="ttext" xlink:href="#s-text"></use>
+            <use class="ttext" xlink:href="#s-text"></use>
+        </svg>
+    </div>
+
+    <div id="colorgridall" class="">
+        <div id="colorgrid" class="">
+            <div class="colorcard before:bg-azure">
+                <div class="content">
+                    <p class="heading font-inter font-bold">Azure
+                    </p>
+                    <section class="font-inter text-[15px]">
+                        <p><span class="font-extrabold">HEX:</span> #007FF0</p>
+                        <p><span class="font-extrabold">HSV:</span> (210°, 100%, 100%)</p>
+                        <p><span class="font-extrabold">RGB:</span> rgb(0, 127, 255)</p>
+                    </section>
+                    <button class="btn bg-azure font-inter text-[14px]"><a href="">Read more</a></button>
+                </div>
+            </div>
+            <div class="colorcard before:bg-black hover:text-[#f0f0f0]">
+                <div class="content hover:text-[#f0f0f0]">
+                    <p class="heading font-inter font-bold ">Black
+                    </p>
+                    <section class="font-inter text-[15px] ">
+                        <p><span class="font-extrabold">HEX:</span> #000000</p>
+                        <p><span class="font-extrabold">HSV:</span> (?°, 0%, 0%)</p>
+                        <p><span class="font-extrabold">RGB:</span> rgb(0, 0, 0)</p>
+                    </section>
+                    <button class="btn bg-black font-inter text-[14px]"><a href="">Read more</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).on('change', '.div-toggle', function () {
+            var target = $(this).data('target');
+            var show = $("option:selected", this).data('show');
+            $(target).children().addClass('hide');
+            $(show).removeClass('hide');
+        });
+        $(document).ready(function () {
+            $('.div-toggle').trigger('change');
+        });
+    </script>
+
+
+</body>
+
+</html>
+
+
+<!-- <script>
+        gsap.registerPlugin(ScrollTrigger);
+        // REVEAL //
+        gsap.utils.toArray(".revealUp").forEach(function (elem) {
+            ScrollTrigger.create({
+                trigger: elem,
+                start: "top 80%",
+                end: "bottom 20%",
+                markers: true,
+                onEnter: function () {
+                    gsap.fromTo(
+                        elem,
+                        { y: 100, autoAlpha: 0 },
+                        {
+                            duration: 1.25,
+                            y: 0,
+                            autoAlpha: 1,
+                            ease: "back",
+                            overwrite: "auto"
+                        }
+                    );
+                },
+                onLeave: function () {
+                    gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+                },
+                onEnterBack: function () {
+                    gsap.fromTo(
+                        elem,
+                        { y: -100, autoAlpha: 0 },
+                        {
+                            duration: 1.25,
+                            y: 0,
+                            autoAlpha: 1,
+                            ease: "back",
+                            overwrite: "auto"
+                        }
+                    );
+                },
+                onLeaveBack: function () {
+                    gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+                }
+            });
+        });
+    </script> -->
+
+<!-- <div onload="popup()">
+
+    </div>
+    <div class="navbar">
+        <a href="donate.html">Donate</a>
+        <a href="about.html">About</a>
+        <a href="index.html">Home</a>
+    </div>
+
+    <div class="header">
+        <svg viewBox="0 0 600 300">
+            
+            <symbol id="s-text" style="font-family: 'Montserrat', sans-serif;"><text text-anchor="middle" x="50%"
+                    y="30%" dy=".35em" style="letter-spacing: 4px; font-size:2em;">Colorpediar</text></symbol>
+            <use class="ttext" xlink:href="#s-text"></use>
+            <use class="ttext" xlink:href="#s-text"></use>
+            <use class="ttext" xlink:href="#s-text"></use>
+            <use class="ttext" xlink:href="#s-text"></use>
+            <use class="ttext" xlink:href="#s-text"></use>
+        </svg>
+    </div>
+    <div class="contrainer">
+        <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <header>
+        <div class="footer-social">
+            <a href="https://twitter.com/colorofficial24"><i style="border: 4px solid #007ff0;"
+                    class="fab fa-twitter"></i></a>
+            <a href="https://t.me/colorpediarofficial"><i style="border: 4px solid #246bce;"
+                    class="fab fa-telegram-plane"></i></a>
+            <a href="mailto:vmusic331@gmail.com? subject=Hi"><i style="border: 4px solid #c4302b;"
+                    class="fas fa-envelope"></i></a>
+            <a href="https://www.instagram.com/colorpediar/"><i style="border: 4px solid #f56040;"
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+    <br>
+    <div class="tabs">
+        <div class="tab">
+            <marquee class="info" width="100%" direction="left" height="20px">
+                Click on the color name to get shades of it.
+            </marquee>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: #007ff0;" class="background">
+                        <div><button id="open" onclick=popup()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop"><button id="cross" onclick=popin()><i
+                                    class="fa fa-times-circle"></i></button><u>Azure</u><br><br>Azure is the color
+                            between cyan and blue on the spectrum of visible light. It is often described as the color
+                            of the sky on a clear day. <br> In the RGB color model, used to create all the colors on a
+                            television or computer screen, azure is created by adding a little green light to blue
+                            light.</div>
+                    </div>
+                    <br>
+                    <a href="azure.html" style="color: #007ff0;">azure</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #007FF0
+                        <br>
+                        HSV: (210°, 100%, 100%)
+                        <br>
+                        RGB: rgb(0, 127, 255)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: black;" class="background">
+                        <div><button style="color: #c8c8c8; " id="open" onclick=popup2()><i
+                                    class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop2"><button id="cross" onclick=popin2()><i
+                                    class="fa fa-times-circle"></i></button><u>Black</u><br><br>Black is the color of
+                            objects that do not emit or reflect light in any part of the visible spectrum; they absorb
+                            all such frequencies of light. Black is the darkest possible color. While this platonic
+                            ideal black is never found with actual pigments or other coloring, sufficiently dark items
+                            are generally referred to as "black".</div>
+                    </div>
+                    <br>
+                    <a href="black.html" style="color: #000000;">black</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #000000
+                        <br>
+                        HSV: (?°, 0%, 0%)
+                        <br>
+                        RGB: rgb(0, 0, 0)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: blue;" class="background">
+                        <div><button id="open" onclick=popup3()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop3"><button id="cross" onclick=popin3()><i
+                                    class="fa fa-times-circle"></i></button><u>Blue</u><br><br></div>
+                    </div>
+                    <br>
+                    <a href="blue.html" style="color: #0000FF;">blue</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #0000FF
+                        <br>
+                        HSV: (240°, 100%, 100%)
+                        <br>
+                        RGB: rgb(0, 0, 255)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: #964B00;" class="background">
+                        <div><button id="open" onclick=popup4()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop4"><button id="cross" onclick=popin4()><i
+                                    class="fa fa-times-circle"></i></button><u>Brown</u><br><br>Browns are usually
+                            described as light or dark, reddish, yellowish, or gray-brown. There are no standardized
+                            names for shades of brown; the same shade may have different names on different color lists,
+                            and sometimes the one name (such as beige or puce) can refer to several very different
+                            colors. The X11 color list of web colors lists seventeen different shades of brown, but the
+                            complete list of browns is much longer. <br><br> Brown colors are usually dark or
+                            desaturated shades of reds, oranges, and yellows which are created on computer and
+                            television screens using the RGB color model and in printing with the CMYK color model.
+                            Browns can also be created by mixing two complementary colors from the RYB color model
+                            (combining all three primary colors).</div>
+                    </div>
+                    <br>
+                    <a href="brown.html" style="color: #964B00;">brown</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #964B00
+                        <br>
+                        HSV: (30°, 100%, 59%)
+                        <br>
+                        RGB: rgb(150, 75, 0)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: cyan;" class="background">
+                        <div><button id="open" onclick=popup5()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop5"><button id="cross" onclick=popin5()><i
+                                    class="fa fa-times-circle"></i></button><u>Cyan</u><br><br>The color cyan, a
+                            greenish-blue, has notable tints and shades. It is one of the subtractive primary colors-
+                            cyan, magenta, and yellow. <br><br> The first recorded use of cyan blue ("cyan blue" was the
+                            name used for the color "cyan" in the 19th century) as a color name was in 1879.</div>
+                    </div>
+                    <br>
+                    <a href="cyan.html" style="color: #00ffff;">cyan</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #00FFFF
+                        <br>
+                        HSV: (180°, 100%, 100%)
+                        <br>
+                        RGB: rgb(0, 255, 255)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: #00FF00;" class="background">
+                        <div><button id="open" onclick=popup6()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop6"><button id="cross" onclick=popin6()><i
+                                    class="fa fa-times-circle"></i></button><u>Green</u><br><br>Varieties of the color
+                            green may differ in hue, chroma (also called saturation or intensity) or lightness (or
+                            value, tone, or brightness), or in two or three of these qualities. Variations in value are
+                            also called tints and shades, a tint being a green or other hue mixed with white, a shade
+                            being mixed with black.</div>
+                    </div>
+                    <br>
+                    <a href="green.html" style="color: #00FF00;">green</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #00FF00
+                        <br>
+                        HSV: (120°, 100%, 100%)
+                        <br>
+                        RGB: rgb(0, 255, 0)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: grey;" class="background">
+                        <div><button id="open" onclick=popup7()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop7"><button id="cross" onclick=popin7()><i
+                                    class="fa fa-times-circle"></i></button><u>Gray/Grey</u><br><br>Variations of gray
+                            or grey include achromatic grayscale shades, which lie exactly between white and black, and
+                            nearby colors with low colorfulness. <br><br> This tone of gray (HTML gray) is universally
+                            used as the standard for gray because it is that tone of gray which is halfway between white
+                            and black.</div>
+                    </div>
+                    <br>
+                    <a href="grey.html" style="color: #808080;">grey</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #808080
+                        <br>
+                        HSV: (?°, 0%, 50%)
+                        <br>
+                        RGB: rgb(128, 128, 128)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: magenta;" class="background">
+                        <div><button id="open" onclick=popup8()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop8"><button id="cross" onclick=popin8()><i
+                                    class="fa fa-times-circle"></i></button><u>Magenta</u><br><br>Magenta, is one of the
+                            three secondary colors in the RGB color model, used to make all the colors on computer and
+                            television displays. It is made by a mixture of red and blue light at equal intensity. It is
+                            called magenta on X11 list of color names, and fuchsia on the HTML color list. The web
+                            colors magenta and fuchsia are exactly the same color. Sometimes the web color magenta is
+                            called electric magenta or electronic magenta.</div>
+                    </div>
+                    <br>
+                    <a href="magenta.html" style="color: #FF00FF;">magenta</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #FF00FF
+                        <br>
+                        HSV: (300°, 100%, 100%)
+                        <br>
+                        RGB: rgb(255, 0, 255)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: #FF8000;" class="background">
+                        <div><button id="open" onclick=popup9()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop9"><button id="cross" onclick=popin9()><i
+                                    class="fa fa-times-circle"></i></button><u>Orange</u><br><br>In optics, orange has a
+                            wavelength between approximately 585 and 620 nm and a hue of 30° in HSV color space. In the
+                            RGB color space it is a secondary color numerically halfway between gamma-compressed red and
+                            yellow, as can be seen in the RGB color wheel. The complementary color of orange is azure.
+                            Orange pigments are largely in the ochre or cadmium families, and absorb mostly blue light.
+                        </div>
+                    </div>
+                    <br>
+                    <a href="orange.html" style="color: #FF8000;">orange</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #FF8000
+                        <br>
+                        HSV: (30°, 100%, 100%)
+                        <br>
+                        RGB: rgb(255, 128, 0)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: pink;" class="background">
+                        <div><button id="open" onclick=popup10()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop10"><button id="cross" onclick=popin10()><i
+                                    class="fa fa-times-circle"></i></button><u>Pink</u><br><br>Pink colors are usually
+                            light or desaturated shades of reds, roses, and magentas which are created on computer and
+                            television screens using the RGB color model and in printing with the CMYK color model. As
+                            such, it is an arbitrary classification of color. Below is a list of some of the common pink
+                            colors.</div>
+                    </div>
+                    <br>
+                    <a href="pink.html" style="color: #ffc0cb;">pink</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #FFC0CB
+                        <br>
+                        HSV: (350°, 25%, 100%)
+                        <br>
+                        RGB: rgb(255, 192, 203)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: purple;" class="background">
+                        <div><button id="open" onclick=popup11()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop11"><button id="cross" onclick=popin11()><i
+                                    class="fa fa-times-circle"></i></button><u>Purple</u><br><br>Violet refers to any
+                            colour perceptually evoked by light with a predominant wavelength of roughly 380–450 nm.
+                            Tones of violet tending towards the blue are called indigo. Purple colors are colors that
+                            are various blends of violet or blue light with red light.</div>
+                    </div>
+                    <br>
+                    <a href="purple.html" style="color: #800080;">purple</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #800080
+                        <br>
+                        HSV: (300°, 100%, 50%)
+                        <br>
+                        RGB: rgb(128, 0, 128)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: violet;" class="background">
+                        <div><button id="open" onclick=popup12()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop12"><button id="cross" onclick=popin12()><i
+                                    class="fa fa-times-circle"></i></button><u>Violet</u><br><br>Violet refers to any
+                            colour perceptually evoked by light with a predominant wavelength of roughly 380–450 nm.
+                            Tones of violet tending towards the blue are called indigo. Purple colors are colors that
+                            are various blends of violet or blue light with red light.</div>
+                    </div>
+                    <br>
+                    <a href="violet.html" style="color: #EE82EE;">violet</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #EE82EE
+                        <br>
+                        HSV: (300°, 45%, 93%)
+                        <br>
+                        RGB: rgb(238, 130, 238)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: red;" class="background">
+                        <div><button id="open" onclick=popup13()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop13"><button id="cross" onclick=popin13()><i
+                                    class="fa fa-times-circle"></i></button><u>Red</u><br><br> It is one of the three
+                            primary colors of light in the RGB color model, along with green and blue. The three
+                            additive primaries in the RGB color system are the three colors of light chosen such as to
+                            provide the maximum gamut of colors that are capable of being represented on a computer or
+                            television set, at a reasonable expense of power. Portable devices such as mobile phones
+                            might have an even narrower gamut due to this purity–power tradeoff and their "red" may be
+                            less colorful and more orangish than the standard red of sRGB. <br> This color is also the
+                            color called red in the X11 web colors, which were originally formulated in 1987. It is also
+                            called color wheel red. It is at precisely zero (360) degrees on the HSV color wheel, also
+                            known as the RGB color wheel. Its complementary color is cyan.</div>
+                    </div>
+                    <br>
+                    <a href="red.html" style="color: #FF0000;">red</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #FF0000
+                        <br>
+                        HSV: (0°, 100%, 100%)
+                        <br>
+                        RGB: rgb(255, 0, 0)
+                    </div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: #FF0080;" class="background">
+                        <div><button id="open" onclick=popup14()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop14"><button id="cross" onclick=popin14()><i
+                                    class="fa fa-times-circle"></i></button><u>Red</u><br><br>Rose is the color halfway
+                            between red and magenta on the HSV color wheel, also known as the RGB color wheel, on which
+                            it is at hue angle of 330 degrees. <br><br> Rose is one of the tertiary colors on the HSV
+                            (RGB) color wheel. The complementary color of rose is spring green. Sometimes rose is quoted
+                            instead as the web-safe color FF00CC, which is closer to magenta than to red, corresponding
+                            to a hue angle near 320 degrees, or the web-safe color FF0077, which is closer to red than
+                            magenta, corresponding to a hue angle of about 340 degrees.</div>
+                    </div>
+                    <br>
+                    <a href="rose.html" style="color: #FF0080;">rose</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #FF0080
+                        <br>
+                        HSV: (330°, 100%, 100%)
+                        <br>
+                        RGB: rgb(255, 0, 128)
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: blanchedalmond;" class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: white;" class="background">
+                        <div><button id="open" onclick=popup15()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop15"><button id="cross" onclick=popin15()><i
+                                    class="fa fa-times-circle"></i></button><u>White</u><br><br>White is a color, the
+                            perception of which is evoked by light that stimulates all three types of color sensitive
+                            cone cells in the human eye in equal amounts and with high brightness compared to the
+                            surroundings. A white visual stimulation will be void of hue and grayness. White is the
+                            lightest possible color.</div>
+                    </div>
+                    <br>
+                    <a href="white.html" style="color: #FFFFFF;">white</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #FFFFFF
+                        <br>
+                        HSV: (-°, 0%, 100%)
+                        <br>
+                        RGB: rgb(255, 255, 255)
+                    </div>
+                    <br>
+                    <div class="under-txt">*Colored because the color(white) is almost invisible*</div>
+                </div>
+            </div>
+            <div class="tap">
+                <div class="tapp">
+                    <br>
+                    <div style="background-color: yellow;" class="background">
+                        <div><button id="open" onclick=popup16()><i class="fa fa-info-circle"></i></button></div>
+                        <div class="pop" id="pop16"><button id="cross" onclick=popin16()><i
+                                    class="fa fa-times-circle"></i></button><u>Yellow</u><br><br>This color is also
+                            called color wheel yellow. It is at precisely 60 degrees on the HSV color wheel, also known
+                            as the RGB color wheel. Its complementary color is blue.</div>
+                    </div>
+                    <br>
+                    <a href="yellow.html" style="color: #FFFF00;">yellow</a>
+                    <br>
+                    <br>
+                    <div class="text">
+                        HEX: #FFFF00
+                        <br>
+                        HSV: (60°, 100%, 100%)
+                        <br>
+                        RGB: rgb(255, 255, 0)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+ -->
